@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html translate="no" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplikasi Pendaftaran PMB Universitas Negeri Yogyakarta. Pendaftaran PMB UNY secara online dapat dilakukan menggunakan aplikasi ini. Informasi Penerimaan Mahasiswa Baru UNY yang lengkap dapat dilihat di laman http://pmb.uny.ac.id">
+    <meta name="author" content="Chandra R. Atmaja">
+    <meta name="keyword" content="SM UNY, Pascasarjana, UNY, S2, S3, Pendaftaran">
+    <meta name="theme-color" content="#1b2589">
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="Sx2XfXNu4RSqXTlrSQR-x16o2nRoVcmR2iKjmrDxF1pzJN0NSw3Sf9locC0RYgb-aPiMDjs3rMOCcPfX1pdxLg==">
+
+    <title>PMB UNY :: Validasi Letter of Acceptance</title>
+    <link rel="preconnect" href="https://www.googletagmanager.com/">
+    <link rel="preconnect" href="https://www.google-analytics.com/">
+    <!-- Google Tag Manager -->
+    <script async="" src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/google-analytics_analytics.js"></script><script async="" src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/google-analytics_analytics_002.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KNN6Q6Q');</script>
+    <!-- End Google Tag Manager -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-34796320-3', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <link href="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/bootstrap.min.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/theme.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/bootstrap-reset.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/font-awesome.min.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/style.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/style-responsive.css" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/dropdown-x.min.css" rel="stylesheet">
+<style>
+.blue-bg {
+    background: #4a89dc none repeat scroll 0 0;
+    border-bottom: 1px solid #20638f;
+}
+.header-frontend .navbar-default {
+    background-color: #1b2589;
+}
+.header-frontend .nav li a, .header-frontend .nav li.active ul.dropdown-menu li a
+{
+    color: #fff
+}
+.header-frontend .dropdown-menu {
+    background-color: #4a89dc;
+}
+.form-group.required .control-label:after {
+  content:" *";
+  color:red;
+}
+.form-control {
+    color:#555555;
+}
+.ico-done {
+    background: #99c262 none repeat scroll 0 0;
+}
+.icon-wrap {
+    color: #475168;
+}
+.feature-head p {
+    color: #333
+}
+body {
+    color: #333
+}
+#loadingDiv {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    opacity: 0.7;
+    z-index: 1000;
+}
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 120px auto auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid #4a89dc;
+    border-right: 1.1em solid #4a89dc;
+    border-bottom: 1.1em solid #4a89dc;
+    border-left: 1.1em solid #fec50e;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+    z-index: 1001;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+</style>
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<![endif]-->
+<script src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/app.js"></script>    <link rel="apple-touch-icon" href="https://daftarpmb.uny.ac.id/img/apple/apple-touch-icon-iphone-60x60.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://daftarpmb.uny.ac.id/img/apple/apple-touch-icon-ipad-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://daftarpmb.uny.ac.id/img/apple/apple-touch-icon-iphone-retina-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://daftarpmb.uny.ac.id/img/apple/apple-touch-icon-ipad-retina-152x152.png">
+    <link rel="manifest" href="https://daftarpmb.uny.ac.id/manifest.json">
+    <!-- Bootstrap core CSS -->
+    <!--external css-->
+
+    <!-- Custom styles for this template -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNN6Q6Q"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="loadingDiv" style="display: none;">
+    <div class="loader"></div>
+    <h1 class="text-warning">Loading...</h1>
+</div>
+<!--header start-->
+<header class="header-frontend blue-bg">
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <a class="navbar-brand showLoadingDiv" href="https://daftarpmb.uny.ac.id/"><img alt="Logo UNY" src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/logo-pmb_2.png" width="217" height="51"></a>
+            </div>
+            <div class="navbar-collapse collapse ">
+                <ul id="w0" class="nav navbar-nav"><li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pendaftaran <span class="caret"></span></a><ul id="w1" class="dropdown-menu"><li><a href="https://daftarpmb.uny.ac.id/pendaftar/ambil-nomor/anhkQURuMU1DVFNsUTZCcHhJU2V5QT09" tabindex="-1">Program Magister Jalur CBT Domisili Intake Genap 2022/2023 Gel.2</a></li>
+<li class="divider"></li>
+<li><a href="https://daftarpmb.uny.ac.id/pendaftar/ambil-nomor/NmN2ek5BdUh3UG5JTUNzT1lsd0tEZz09" tabindex="-1">Program Magister Jalur Portofolio Intake Genap 2022/2023 Gel.2</a></li>
+<li class="divider"></li>
+<li><a href="https://daftarpmb.uny.ac.id/pendaftar/ambil-nomor/bEZGWEYyMTI2ZU5nVlB3T09sdEhUQT09" tabindex="-1">RPL Reguler Jenjang Magister Intake Genap 2022/2023 Gel.2</a></li>
+<li class="divider"></li>
+<li><a href="https://daftarpmb.uny.ac.id/pendaftar/ambil-nomor/c1c0U0VkK215Slc1dXdzc2RpUTNjUT09" tabindex="-1">Program Doktor Jalur CBT Domisili Intake Genap 2022/2023 Gel.2</a></li>
+<li class="divider"></li>
+<li><a href="https://daftarpmb.uny.ac.id/pendaftar/ambil-nomor/ZWdoYTFlRUJ0aEpTb29tUGIwWTY0Zz09" tabindex="-1">Program Doktor Jalur Portofolio Intake Genap 2022/2023 Gel.2</a></li></ul></li>
+<li><a href="http://pmb.uny.ac.id/">Informasi PMB</a></li>
+<li><a href="https://daftarpmb.uny.ac.id/pengumuman">Pengumuman Hasil</a></li>
+<li><a href="https://daftarpmb.uny.ac.id/site/login">Login</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="https://daftarpmb.uny.ac.id/pengumuman/validate/TTR0cnlNc0p4R1JOY29wSS9pcmFYdz08?lg=id" data-toggle="dropdown">Bahasa <span class="caret"></span></a><ul id="w2" class="dropdown-menu"><li><a href="https://daftarpmb.uny.ac.id/pengumuman/validate/TTR0cnlNc0p4R1JOY29wSS9pcmFYdz08?lg=en" tabindex="-1">English</a></li></ul></li></ul>            </div>
+        </div>
+    </div>
+</header>
+<!--header end-->
+
+<!--container start-->
+        <div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <h1>Validasi Letter of Acceptance</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="text-center feature-head">
+            <p>Selamat Nur Milati,</p>
+            <p>Anda <strong>LULUS</strong></p>
+            <p>Seleksi PMB UNY Program Magister Jalur CBT Kampus Gel.3 2021</p>
+            <p>Anda diterima di Program Studi Pendidikan Teknologi dan Kejuruan - S2</p>
+            <hr>
+            <p>Nomor Surat LoA : B/1098/UN34/TM.00.07/2021</p>
+            <p>Pejabat Penandatangan : Prof. Dr. Sumaryanto, M.Kes.</p>
+            <p>NIP Pejabat Penandatangan : 196503011990011001</p>
+            <hr>
+            <a target="_blank" href="https://daftarpmb.uny.ac.id/download/loa/YUs0UVYvRktaSTg1VDR4Z3pEMWdvZz09" class="btn btn-success"><i class="fa fa-fw fa-download"></i> Download Letter of Acceptance</a>
+        </div>
+    </div>
+</div><!--container end-->
+
+<!--footer start-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-3">
+                <h1>KONTAK KAMI</h1>
+                <address>
+                    <p><strong>KANTOR LAYANAN ADMISI</strong></p>
+                    <p>Jl. Colombo No.1 Yogyakarta 55281<br>Gedung IKA UNY  Lantai 1<br>
+                        Telp. 0274 4605001, 0274 548811 (Jam Kerja 07.30 - 16.00 WIB)<br>
+                        WA : 085158116006</p>
+                    <p>Website : <a href="http://pmb.uny.ac.id/">http://pmb.uny.ac.id</a></p>
+                    <p>Email : pmb@uny.ac.id</p>
+                    <!-- 22 Desember 2022, 20:04:43 -->
+                    <!-- 22 Desember 2022, 20:04:43 -->
+                </address>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+<nav class="navbar navbar-default navbar-expand navbar-fixed-bottom hidden-lg hidden-md hidden-sm" style="background-color: #1b2589;">
+    <div class="container-fluid">
+        <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group text-center" role="group" style="align-content: center;">
+                <a class="navbar-brand" style="color: #fff" href="https://daftarpmb.uny.ac.id/"><i class="fa fa-fw fa-home showLoadingDiv"></i> Home</a>
+            </div>
+            <div class="btn-group text-center" role="group">
+                <a class="navbar-brand" style="color: #fff" href="https://daftarpmb.uny.ac.id/site/login"><i class="fa fa-fw fa-key showLoadingDiv"></i> Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- js placed at the end of the document so the pages load faster -->
+
+<!--common script for all pages-->
+<script src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/jQuery-2.1.4.min.js"></script>
+<script src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/yii.js"></script>
+<script src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/bootstrap.min.js"></script>
+<script src="PMB%20UNY%20Validasi%20Letter%20of%20Acceptance_files/dropdown-x.min.js"></script>
+<script>jQuery(function ($) {
+$('.showLoadingDiv').click(function(){
+    $('#loadingDiv').show();
+});
+});</script><script>
+    $(window).load(function() {
+       setTimeout(function() {
+           $('#loadingDiv').hide();
+       }, 500);
+    });
+</script>
+
+
+</body></html>
